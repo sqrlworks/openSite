@@ -1,4 +1,5 @@
 # openSite_run.py - Opens user input: url in user's default browser from the command line
+#Functionaliy platform dependent - for Windows only
 
 import sys, os
 
@@ -9,4 +10,11 @@ if len(sys.argv) < 2:
 print ('Argument List: ' + str(sys.argv))
 url = sys.argv[1]
 
-os.startfile(url)
+if sys.platform.startswith('win'):
+	try:
+		os.startfile(url)
+		print("Running on Windows: " + sys.platform)
+	except:
+		print("Error: Invalid URL")
+else:
+	print("Functionality for Windows only")
