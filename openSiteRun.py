@@ -22,7 +22,7 @@ if sys.platform.startswith('win'):
 			invalid_URL.append(url)
 
 	if invalid_URL:
-		print('Error: Invlaid URL for: ' + ', '.join(invalid_URL) +'\nMake sure to include prefix: www|http:|https:')
+		print('Error: Invalid URL for: ' + ', '.join(invalid_URL) +'\nMake sure to include prefix: www|http:|https:')
 
 else:
 	print("Functionality for Windows only")
